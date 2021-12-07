@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Ny Arce - Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./Main_style.css">
+    </head>
+
+    <body>
+        <!-- NAV -->
+        <div class="navbar">
+            <a class="active" href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#github">GITHUB</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <!-- BACKGROUND VIDEO-->
+        <div id="home">
+            <video autoplay muted loop id="ocean">
+                <source src="./Imgs/ocean.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- VIDEO TEXT OVERLAY -->
+        <div class="row row1">
+            
+            <div class="column_1">
+                <img src="./Imgs/profile_pic.jpg" alt="Profile Photo" class="profileimg">
+            </div>
+            
+            
+            <div class="column_2">
+                <div class="video_text">
+                    <h1 class="white-text">Ny Arce</h1>
+                        <p><strong>
+                            Currently just a space filler.
+                            <br>
+                            We'll put relevant information here once we get it sorted.
+                            <br>
+                            Promise.
+                        </strong></p>
+                </div>      
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="row" id="about">
+
+            <div class="column_4">
+                <h1>About</h1>
+                <p>I am currently a student working through Tech Academy's software dev bootcamp.
+                    <br>Growing up with an Atart 1040ST as my first computer, I've always been tech adjacent with a love of hardware.
+                    <br>Now, I'm working on the software side and digging deeper than I ever thought I would.
+                </p>
+            </div>
+
+            <div class="column_3">
+                <img src="./Imgs/purplekeys.png" alt="Keyboard with purple backlights">
+            </div>
+        </div>
+
+        <!-- GITHUB -->
+        <div class="row" id="github">
+            <div class="column_3">
+                <img src="./Imgs/github.png" alt="github logo art">
+            </div>
+
+            <div class="column_4">
+                <h1>Github</h1>
+                <p>Personal Githib Directory
+                    <br><a href="http://github.com/xeroxsinner" target="_blank">You can view my projects here.</a>
+                </p>
+            </div>
+        </div>
+        
+        <!-- CONTACT -->
+        <div class="row" id="contact">
+            <div class="column_4">
+                <h1>Contact</h1>                
+            </div>
+
+            <div class="column_3">
+                <form action="https://formspree.io/f/meqnjwpa" method="POST">
+                    <label>Name:</label>
+                        <input type="text" id="Name" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="center"><a href="#home">Ny Arce &bull; 2021</a></p>
+        </footer>
+    </body>
+
+</html>
