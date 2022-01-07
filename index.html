@@ -26,7 +26,7 @@
             <a class="active" href="#home">HOME</a>
             <a href="#about">ABOUT</a>
             <a href="#github">GITHUB</a>
-            <a href="#contact">CONTACT</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">CONTACT</a>
         </div>
 
         <!-- BACKGROUND VIDEO-->
@@ -47,7 +47,7 @@
             <div class="column_2">
                 <div class="video_text">
                     <h1>Ny Arce</h1>
-                        <p class='maintext'><strong>
+                        <p class="maintext"><strong>
                             Currently just a space filler.
                             <br>
                             We'll put relevant information here once we get it sorted.
@@ -155,20 +155,20 @@
             </div>
         
         <!-- CONTACT -->
-        <div class="row" id="contact">
-            <div class="column_4">
-                <h1>Contact</h1>                
-            </div>
-
-            <div class="column_3">
-                <form action="https://formspree.io/f/meqnjwpa" method="POST">
-                    <label>Name:</label>
-                        <input type="text" id="Name" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+        <div id="contact">
+            <button onclick="openForm()" class='pop_up_button'>CONTACT</button>
+            <div class='form-popup' id='myForm'>
+                    <form action="https://formspree.io/f/meqnjwpa" method="POST" class='form-container'>
+                    <h1>Contact</h1>    
+                    <label for='name'>Name:</label>
+                        <input type="text" placeholder="Please enter your name here" name='name' required>
+                    <label for='email'>Email:</label>
+                        <input type="text" placeholder="Please enter your email here" name='email' required>
+                    <label for="message">Message:</label>
+                        <input type="text" name="Message" placeholder="Please write your message here">
+                        
+                    <button type="submit" class='btn'>SUBMIT</button>
+                    <button type="button" class='btn cancel' onclick="closeForm()">CANCEL</button>
                 </form>
             </div>
         </div>
@@ -179,4 +179,3 @@
         </footer>
     </body>
 
-    
