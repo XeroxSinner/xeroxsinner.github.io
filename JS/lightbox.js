@@ -35,3 +35,19 @@ function showSlides(n) {
     captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
+
+
+//Form Popup JS
+function openForm() {
+    document.getElementById('myForm').style.display = 'block';
+}
+
+function closeForm() {
+    document.getElementById('myForm').style.display = 'none';
+}
+
+document.addEventListener('click', function(event) {
+    if (event.target.matches('.cancel') || !event.target.closest('.form-popup') && !event.target.closest('.pop_up_button') && !event.target.closest('.contact')){
+        closeForm()
+    }
+}, false )

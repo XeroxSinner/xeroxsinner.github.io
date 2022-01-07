@@ -1,4 +1,8 @@
 /**---- General Style ----**/
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -8,6 +12,11 @@ body {
     background-color: darkcyan;
     opacity: 1;
     transition: 2s opacity;
+    user-select: none;
+    letter-spacing: .2vw;
+    font-family: 'raleway', sans-serif;
+    font-size: 1.5vw;
+    user-select: none;
 }
 
 body.fade-out {
@@ -20,8 +29,9 @@ h1 {
     font-family: 'raleway', sans-serif;
     text-align: left;
     margin-top: 3%;
+    margin-left: 3%;
+    font-size: 3vw;
     color: #fff;
-    padding-left: 40px;
 }
 
 .lbtext {
@@ -30,35 +40,26 @@ h1 {
     text-align: center;
     margin-top: 3%;
     color: #fff;
-    padding-left: 40px;
+    padding-left: 3vw;
 }
 
 .maintext {
     font-family: 'raleway', sans-serif;
     text-align: left;
+    letter-spacing: .1vw;
     font-size: 16px;
-    padding-left: 40px;
-    padding-right: 40px;
-    color: #fff;
-}
-
-label {
-    font-family: 'raleway', sans-serif;
-    text-align: left;
-    font-size: 18px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1vw;
+    padding-right: 1vw;
     color: #fff;
 }
 
 .mainimg {
     border-radius: 50px 10px;
     border: solid #fff 3px;
-    max-width: 100%;
+    max-width: 95%;
     height: 275px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto auto auto auto;
 }
 
 a {
@@ -68,13 +69,6 @@ a {
 .center {
     padding: 1%;
     text-align: center;
-}
-
-@media screen and (max-width: 576px) {
-    img {
-        height: 100px;
-        margin-top: 150px;
-    }
 }
 
 /**---- Nav Bar ----**/
@@ -98,7 +92,7 @@ a {
     float: left;
     display: block;
     color: #fff;
-    padding: 12px 12px;
+    padding: .75vw 1vw;
     text-decoration: none;
     font-family: 'raleway', sans-serif;
     font-size: 18px;
@@ -113,12 +107,7 @@ a {
     to {top: 0vw}
 }
 
-@media screen and (max-width: 576px) {
-    .navbar a{
-        width: 20%;
-        font-size: 12px;
-    }
-}
+
 
 .navbar a:hover {
     background-color: #fff;
@@ -138,24 +127,18 @@ a {
     z-index: -1;
 }
 
-@media screen and (max-width: 576px) {
-    #ocean {
-        display: none;
-    }
-}
-
 /**---- Text over Video ----**/
 .row1 {
-    background: rgba(0,0,0,.5);
+
     color: #fff;
     width:auto;
-    height: 330px;
-    padding: 20px;
+    height: 37vh;
+    padding: 1%;
     position: relative;
     -webkit-animation: moveVideoText 5.75s;
     animation: moveVideoText 5.75s;
-
 }
+
 .profileimg {
     display: block;
     border-radius: 50px 10px;
@@ -163,21 +146,26 @@ a {
     padding: 10px;
     margin:auto;
     width: 250px;
-    height: 250px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1250px) {
     .profileimg {
-        height: 100px;
+        height: 150px;
+        width: 150px;
         margin-top: 150px;
     }
 }
 
 .video_text {
     color: #fff;
+    font-size: 2vw;
+    font-weight: 900;
     height: 250px;
-    padding: 20px;
+    padding: 0;
     position: relative;
+    font-family: 'raleway', sans-serif;
+    text-align: justify;
+    letter-spacing: .1vw;
 }
 
 @keyframes moveVideoText {
@@ -189,8 +177,8 @@ a {
 .column_1 { /**-- Profile Pic --**/
     float: left;
     width: 20%;
-    padding: 10px;
-    padding-top: .75%;
+    padding: .75%;
+    padding-top: 1.5%;
     height: 300px;
     margin-top: 1.5%;
 }
@@ -198,15 +186,12 @@ a {
 .column_2 { /**---- Top Text ----**/
     float: left;
     width: 80%;
-    padding: 10px;
-    padding-top: 1%;
+    padding: .75%;
+    padding-top: .75%;
     height: 300px;
     margin-top: 1.5%;
 }
 
-.row {
-    display: flex;
-}
 
 /**---- REST OF COLUMNS ----**/
 .column_3 { 
@@ -220,47 +205,191 @@ a {
 .column_4 {
     float: left;
     width: 50%;
-    padding: 10px;
-    padding-top: 2%;
+    padding-top: .75%;
     height: 300px;
     background-color: rgb(1, 58, 58);
 }
 
-/**---- CONTACT FORM ----**/
-input[type=text] {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 10px;
-    resize: vertical;
-    font-family: 'raleway', sans-serif;
-}
-
-input[type=text]:hover {
-    box-shadow: 0 0 5px darkcyan inset;
-}
-
-input[type=submit] {
-    background-color: rgb(1, 58, 58);
-    color: #fff;
-    font-weight: bolder;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+/* Pop Up Button Styles */
+.pop_up_button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 20vw;
+    background-color: darkcyan;
+    color: white;
+    border: solid white;
     cursor: pointer;
-    display: block;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'raleway', sans-serif;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
 }
 
-input[type=submit]:hover {
-    background-color: #fff;
-    color: rgb(1, 58, 58);
-    transform: scale(1.2);
-    transition: transform 1s;
+@keyframes movePopup {
+    from {right: -40vw}
+    to {right: 1.75vw}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw}
+    to {right: 1.75vw}
+}
+
+.form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+.form-container {
+    max-width: 35vw;
+    padding: 1vw;
+    background-color: darkcyan;
+    border: 3px solid white;
+    border-radius: 50px 10px;
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: white;
+    font-size: 1vw;
+}
+
+button {
+    font-family: 'raleway', sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 49.5%;
+    height: auto;
+    padding: 1.5vw;
+    border-radius: 50px 10px;
+}
+
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: darkcyan;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: white;
+}
+
+.form-container .btn {
+    background-color: rgb(0, 202, 202);
+    color: white;
+    border-color: white;
+    margin-bottom: 1vw;
+}
+
+.form-container .cancel {
+    background-color: rgb(0, 49, 49);
+    color: darkgray;
+    border-color: darkgray;
+    margin-bottom: 1vw;
+}
+
+/* Media Image Stuff */
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3.75vw;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.75vw;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 2vw;
+    } 
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.75vw;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1.35vw;
+    }
+}
+
+/*Media rule for navbar links for different screen sizes*/
+/* Screens 1080px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 1080px) {
+    .Navbar a{
+        width: 20%; /* This sets each navbar link to 1/5 of the navbar */
+        font-size: 2.5vw;
+    }
+}
+
+/* Media rules to enlarge the font of the white text for smaller screens */
+@media screen and (max-width: 1080px) {
+    .quote{
+        font-size: 3.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Media rules to increase the size of the columns for larger screens */
+@media screen and (min-width: 1725px) {
+    .Column_1 {
+        height: 550px;
+    }
+    .Column_2 {
+        height: 550px;
+    }
+}
+
+
+/*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
+@media screen and (min-width: 2000px) {
+    h1{
+        margin-top: 0;
+    }
 }
