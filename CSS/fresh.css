@@ -1,62 +1,69 @@
-html {
-    scroll-behavior: smooth;
-}
-
+/**---- General Style ----**/
 body {
     margin: 0%;
-    opacity: 1;
-    transition: 3s opacity;
-    letter-spacing: .2vw;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
-    overflow-x: hidden;
-    user-select: none;
-}
-
-body.fade-out {
-    opacity: .1;
+    background-color: darkcyan;
 }
 
 h1 {
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'raleway', sans-serif;
+    text-align: left;
+    margin-top: 3%;
+    color: #fff;
+    padding-left: 40px;
+}
+
+.lbtext {
+    text-transform: uppercase;
+    font-family: 'raleway', sans-serif;
     text-align: center;
     margin-top: 3%;
-    color: white;
+    color: #fff;
+    padding-left: 40px;
 }
 
 .maintext {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'raleway', sans-serif;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
     color: #fff;
-    text-align: justify;
-    letter-spacing: .1vw;
-    font-size: 2.5vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
 }
 
-.profileimg {
-    display: block;
-    border-radius: 50px 10px;
-    border: 5px solid #fff;
-    padding: 10px;
-    margin:auto;
-    width: 250px;
-    height: 250px;
+label {
+    font-family: 'raleway', sans-serif;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
 }
 
 .mainimg {
-    border-radius: 8px;
-    border: 5px solid #fff;
-    max-height: 100%;
+    border-radius: 50px 10px;
+    border: solid #fff 3px;
     max-width: 100%;
+    height: 275px;
     display: block;
-    margin: auto auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-footer {
-    padding: 2%;
-    background-color: darkcyan;
+a {
+    color:lavenderblush;
+}
+
+.center {
+    padding: 1%;
+    text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
 }
 
 /**---- Nav Bar ----**/
@@ -115,8 +122,6 @@ footer {
 /**---- Video ----**/
 #ocean {
     position:fixed;
-    right: 0;
-    bottom: 0;
     margin-top: 0;
     min-width: 100%;
     z-index: -1;
@@ -128,17 +133,13 @@ footer {
     }
 }
 
-/* Text/Img Over Video */
-@keyframes moveVideoText {
-    from {top: -100vw;}
-    to {top: 0vw;}
-}
-
+/**---- Text over Video ----**/
 .row1 {
     background: rgba(0,0,0,.5);
-    width: 100%;
+    color: #fff;
+    width:auto;
     height: 330px;
-    padding-top: 2vh;
+    padding: 20px;
     position: relative;
     -webkit-animation: moveVideoText 5.75s;
     animation: moveVideoText 5.75s;
@@ -154,13 +155,246 @@ footer {
     height: 250px;
 }
 
+@media screen and (max-width: 576px) {
+    .profileimg {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
 .video_text {
     color: #fff;
-    font-size: 2vw;
-    font-weight: 900;
-    padding: 0;
+    height: 250px;
+    padding: 20px;
     position: relative;
+}
+
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/**---- TOP COLUMNS ----**/
+.column_1 { /**-- Profile Pic --**/
+    float: left;
+    width: 20%;
+    padding: 10px;
+    padding-top: .75%;
+    height: 300px;
+    margin-top: 1.5%;
+}
+
+.column_2 { /**---- Top Text ----**/
+    float: left;
+    width: 80%;
+    padding: 10px;
+    padding-top: 1%;
+    height: 300px;
+    margin-top: 1.5%;
+}
+
+.row {
+    display: flex;
+}
+
+/**---- REST OF COLUMNS ----**/
+.column_3 { 
+    float: left;
+    width: 50%;
+    padding-top: .75%;
+    height: 300px;
+    background-color: darkcyan;
+}
+
+.column_4 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 2%;
+    height: 300px;
+    background-color: rgb(1, 58, 58);
+}
+
+/* Pop Up Button Styles */
+.pop_up_button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 20vw;
+    background-color: darkcyan;
+    color: white;
+    border: solid white;
+    cursor: pointer;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+@keyframes movePopup {
+    from {right: -40vw}
+    to {right: 1.75vw}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw}
+    to {right: 1.75vw}
+}
+
+.form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+.form-container {
+    max-width: 35vw;
+    padding: 1vw;
+    background-color: darkcyan;
+    border: 3px solid white;
+    border-radius: 50px 10px;
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: white;
+    font-size: 1vw;
+}
+
+button {
     font-family: 'raleway', sans-serif;
-    text-align: justify;
     letter-spacing: .1vw;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 49%;
+    height: auto;
+    padding: 1.5vw;
+    border-radius: 50px 10px;
+}
+
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: darkcyan;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: white;
+}
+
+.form-container .btn {
+    background-color: rgb(0, 202, 202);
+    color: white;
+    border-color: white;
+    margin-bottom: 1vw;
+}
+
+.form-container .cancel {
+    background-color: rgb(0, 49, 49);
+    color: darkgray;
+    border-color: darkgray;
+    margin-bottom: 1vw;
+}
+
+/* Media Image Stuff */
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3.75vw;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.75vw;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 2vw;
+    } 
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.75vw;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1.35vw;
+    }
+}
+
+/*Media rule for navbar links for different screen sizes*/
+/* Screens 1080px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 1080px) {
+    .Navbar a{
+        width: 20%; /* This sets each navbar link to 1/5 of the navbar */
+        font-size: 2.5vw;
+    }
+}
+
+/* Media rules to enlarge the font of the white text for smaller screens */
+@media screen and (max-width: 1080px) {
+    .quote{
+        font-size: 3.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
+
+/* Media rules to increase the size of the columns for larger screens */
+@media screen and (min-width: 1725px) {
+    .Column_1 {
+        height: 550px;
+    }
+    .Column_2 {
+        height: 550px;
+    }
+}
+
+
+/*Media rule to remove margin-top from h1 elements for extra large screens (so that the paragraph text fits in the column*/
+@media screen and (min-width: 2000px) {
+    h1{
+        margin-top: 0;
+    }
 }
