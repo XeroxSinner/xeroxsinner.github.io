@@ -5,12 +5,12 @@ body {
 }
 
 h1 {
-    text-transform: uppercase;
-    font-family: 'raleway', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
     text-align: left;
-    margin-top: 3%;
+    margin-top: 1%;
     color: #fff;
-    padding-left: 40px;
+    padding-left: 1rem;
 }
 
 .lbtext {
@@ -87,10 +87,10 @@ a {
     float: left;
     display: block;
     color: #fff;
-    padding: 12px 12px;
+    padding: 1rem 1rem;
     text-decoration: none;
-    font-family: 'raleway', sans-serif;
-    font-size: 18px;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1em;
     text-align: center;
     position: relative;
     -webkit-animation: moveNavText 4s;
@@ -105,7 +105,7 @@ a {
 @media screen and (max-width: 576px) {
     .navbar a{
         width: 20%;
-        font-size: 12px;
+        font-size: 1em;
     }
 }
 
@@ -138,8 +138,8 @@ a {
     background: rgba(0,0,0,.5);
     color: #fff;
     width:auto;
-    height: 330px;
-    padding: 20px;
+    height: 10%;
+    padding: 1rem;
     position: relative;
     -webkit-animation: moveVideoText 5.75s;
     animation: moveVideoText 5.75s;
@@ -149,8 +149,10 @@ a {
     display: block;
     border-radius: 50px 10px;
     border: 5px solid #fff;
-    padding: 10px;
-    margin:auto;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-left: 7rem;
+    /* margin:auto; */
     width: 250px;
     height: 250px;
 }
@@ -178,10 +180,11 @@ a {
 .column_1 { /**-- Profile Pic --**/
     float: left;
     width: 20%;
-    padding: 10px;
+    padding: 1rem;
     padding-top: .75%;
     height: 300px;
     margin-top: 1.5%;
+    position: relative;
 }
 
 .column_2 { /**---- Top Text ----**/
@@ -191,10 +194,11 @@ a {
     padding-top: 1%;
     height: 300px;
     margin-top: 1.5%;
+    position: relative;
 }
 
 .row {
-    display: flex;
+    display: absolute;
 }
 
 /**---- REST OF COLUMNS ----**/
