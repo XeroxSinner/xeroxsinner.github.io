@@ -92,7 +92,8 @@ body {
     margin-left: 20em;
     margin-right: 20em;
     padding-bottom: 2em;
-    height: 400px;
+    display:block;
+    min-height: 400px;
 }
 
 .profileImg {
@@ -124,7 +125,7 @@ body {
 .mainImg {
     border-radius: 50px 10px;
     border: solid #fff 3px;
-    width: 55%;
+    width: 35%;
     margin: auto;
     display: flex;
     margin-top: 3%;
@@ -134,7 +135,7 @@ body {
 
 .mainText {
     font-family: 'Advent Pro', sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: 1.2rem;
     padding-left: 10em;
     padding-right: 10em;
@@ -144,9 +145,9 @@ body {
 .mainHeader {
     font-family: 'Lobster', cursive;
     font-size: 5rem;
-    text-align: left;
+    text-align: center;
     color: #fff;
-    margin-left: 2em;
+    /* margin-left: 2em; */
 }
 
 
