@@ -70,6 +70,18 @@ body {
     background-color: darkcyan;
 }
 
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: aquamarine;
+}
+
+a:hover {
+    color: aqua;
+}
+
 /**---- Top Row Styling ----**/
 .nameH1 {
     font-family: 'Lobster', cursive;
@@ -125,7 +137,7 @@ body {
 .mainImg {
     border-radius: 50px 10px;
     border: solid #fff 3px;
-    width: 35%;
+    width: 55%;
     margin: auto;
     display: flex;
     margin-top: 3%;
