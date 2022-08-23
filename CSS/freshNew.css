@@ -64,6 +64,18 @@ body {
     background-color: darkcyan;
 }
 
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: aquamarine;
+}
+
+a:hover {
+    color: aqua;
+}
+
 /**---- Top Row Styling ----**/
 .nameH1 {
     font-family: 'Lobster', cursive;
@@ -86,6 +98,8 @@ body {
     margin-left: 20em;
     margin-right: 20em;
     padding-bottom: 2em;
+    display:block;
+    min-height: 400px;
 }
 
 .profileImg {
@@ -127,7 +141,7 @@ body {
 
 .mainText {
     font-family: 'Advent Pro', sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: 1.2rem;
     padding-left: 10em;
     padding-right: 10em;
@@ -137,9 +151,9 @@ body {
 .mainHeader {
     font-family: 'Lobster', cursive;
     font-size: 5rem;
-    text-align: left;
+    text-align: center;
     color: #fff;
-    margin-left: 2em;
+    /* margin-left: 2em; */
 }
 
 
