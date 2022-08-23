@@ -34,7 +34,7 @@
     to {top: 0vw}
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 800px) {
     .navbar a{
         width: 20%;
         font-size: 1em;
@@ -57,12 +57,6 @@
     margin-top: 0;
     min-width: 100%;
     z-index: -1;
-}
-
-@media screen and (max-width: 576px) {
-    #ocean {
-        display: none;
-    }
 }
 
 /**---- General Style ----**/
@@ -233,3 +227,35 @@ button:hover, .form-container .btn:hover {
     margin-bottom: 1vw;
 }
 
+/* Mobile Responsive */
+@media screen and (max-width: 800px) {
+    #bodyPhoto {
+        display: none;
+    }
+    /*Top Row*/
+    .nameH1 {
+        text-align: center;
+        margin-top: 1%;
+        color: #fff;
+        margin-left: 0em;
+    }
+    
+    .profileText {
+        text-align: center;
+    }
+    
+    .topRow {
+        padding-top: 4em;
+        margin-left: 3em;
+        margin-right: 3em;
+        padding-bottom: 2em;
+    }
+    
+    .profileImg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        height: 60%;
+    }
+}
