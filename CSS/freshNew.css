@@ -242,16 +242,15 @@ button:hover, .form-container .btn:hover {
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 800px) {
-    #bodyPhoto {
-        display: none;
-    }
+@media screen and (max-width: 915px) {
     /*Top Row*/
     .nameH1 {
         text-align: center;
         margin-top: 1%;
         color: #fff;
-        margin-left: 0em;
+        margin-left: auto;
+        display: block;
+        margin-right: auto;
     }
     
     .profileText {
@@ -267,9 +266,88 @@ button:hover, .form-container .btn:hover {
     
     .profileImg {
         display: block;
-        margin-left: auto;
+        margin-left: 2.1em;
         margin-right: auto;
-        width: 60%;
-        height: 60%;
+        width: 80%;
+        height: 80%;
     }
+    /* About Row */
+    .mainHeader {
+        font-family: 'Lobster', cursive;
+        font-size: 5rem;
+        text-align: center;
+        color: #fff;
+        /* margin-left: 2em; */
+    }
+
+    .column_3 { 
+        display: none;
+    }
+    
+    
+    .mainText {
+        font-family: 'Advent Pro', sans-serif;
+        text-align: center;
+        font-size: 1.2rem;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: #fff;
+    }
+
+    .github {
+        background-color: rgb(0, 139, 139, .9);
+    }
+    
+    .pop_up_button {
+        bottom: 3.75vw;
+        width: 40vw;
+    }
+
+    .form-container {
+        max-width: 95vw;
+        padding: 1vw;
+        background-color: darkcyan;
+        border: 3px solid white;
+        border-radius: 50px 10px;
+    }
+    
+    .form-container input[type=text] {
+        width: 100%;
+        padding: 2vw;
+        margin: .6vw 0 .6vw 0;
+        border: none;
+        background: white;
+        font-size: 5vw;
+    }
+    
+    button {
+        font-family: 'raleway', sans-serif;
+        letter-spacing: .1vw;
+        font-size: 1.5vw;
+        font-weight: bolder;
+        cursor: pointer;
+        width: 40%;
+        height: auto;
+        padding: 1.5vw;
+        border-radius: 50px 10px;
+    }
+
+    .formh1 {
+        margin-left: 10%;
+    }
+
+    .form-container .btn {
+        background-color: rgb(0, 202, 202);
+        color: white;
+        border-color: white;
+        margin-bottom: 1vw;
+    }
+    
+    .form-container .cancel {
+        background-color: rgb(0, 49, 49);
+        color: darkgray;
+        border-color: darkgray;
+        margin-bottom: 1vw;
+    }
+
 }
